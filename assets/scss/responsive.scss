@@ -264,6 +264,11 @@
       }
     }
   }
+  .error-info {
+    .search-inp {
+      width: 80%;
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -290,6 +295,11 @@
         padding: 0 5px;
         top: 0;
       }
+    }
+  }
+  .error-info {
+    .search-inp {
+      width: 90%;
     }
   }
 

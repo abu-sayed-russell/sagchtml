@@ -122,7 +122,9 @@
     .working-section .civil-working.civil-workingproces .working-proces, .working-section .civil-working .working-proces {
       height: auto; }
       .working-section .civil-working.civil-workingproces .working-proces .proces-info, .working-section .civil-working .working-proces .proces-info {
-        width: 100%; } }
+        width: 100%; }
+  .error-info .search-inp {
+    width: 80%; } }
 
 @media (max-width: 575px) {
   .header-top .col-lg-4 {
@@ -136,4 +138,6 @@
       padding: 0 25px 0 10px; }
     .header-top .search-inp .search-btn {
       padding: 0 5px;
-      top: 0; } }
+      top: 0; }
+  .error-info .search-inp {
+    width: 90%; } }

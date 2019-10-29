@@ -23,9 +23,9 @@ jQuery(function ($) {
 
         /**Fixed header**/
         if ($(window).scrollTop() > 250) {
-            $('.header').addClass('sticky fade_down_effect');
+            $('.header-top, .sticky-header').addClass('sticky fade_down_effect');
         } else {
-            $('.header').removeClass('sticky fade_down_effect');
+            $('.header-top, .sticky-header').removeClass('sticky fade_down_effect');
         }
     });
 
@@ -39,18 +39,6 @@ jQuery(function ($) {
             $(this).find("i").toggleClass("fa-angle-up fa-angle-down");
         });
     }
-    /*==========================================================
-        tab js
-   =========================================================*/
-    $('ul.tabs li').click(function () {
-        var tab_id = $(this).attr('data-tab');
-
-        $('ul.tabs li').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#" + tab_id).addClass('current');
-    });
     /*==========================================================
              btn loadmore
      =========================================================*/
@@ -187,15 +175,6 @@ jQuery(function ($) {
     /* ----------------------------------------------------------- */
     /*  Back to top
     /* ----------------------------------------------------------- */
-
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() > $(window).height()) {
-            $(".BackTo").fadeIn('slow');
-        } else {
-            $(".BackTo").fadeOut('slow');
-        }
-
-    });
     $("body, html").on("click", ".BackTo", function (e) {
         e.preventDefault();
         $('html, body').animate({

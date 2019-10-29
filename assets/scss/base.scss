@@ -107,7 +107,7 @@ a:visited {
 }
 
 a {
-  font-family: $opensans;
+  font-family: $orbitron;
   color: $primary-color;
   @include transition();
 }
@@ -127,7 +127,7 @@ a:hover {
   font-weight: 500;
   color: $white-color;
   text-transform: capitalize;
-  background: #d1212b;
+  background: #21396F;
   height: 45px;
   padding: 0 20px;
   line-height: 45px;
