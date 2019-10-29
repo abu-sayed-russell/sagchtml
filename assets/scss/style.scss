@@ -716,8 +716,12 @@
 /* top header */
 .header-top {
   @include position(relative);
-  padding: 15px 0;
-  border-bottom: 1px solid #e2e3e4;
+  padding: 10px 0 0;
+
+  .top-bar {
+    border-bottom: 1px solid #e2e3e4;
+    padding: 0 0 10px;
+  }
 
   //background-color: $secondary-color;
   .top-contact, .sagc-social {
@@ -731,7 +735,7 @@
       margin-right: 20px;
 
       i {
-        color: #33a248;
+        color: #21396F;
         margin-right: 5px;
       }
 
@@ -747,6 +751,7 @@
   padding-top: 1px;
   padding-left: 15px;
   width: 60%;
+  margin-top: 5px;
 
   .inp {
     border: 1px solid #858585;;
