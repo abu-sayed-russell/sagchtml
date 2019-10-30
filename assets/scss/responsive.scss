@@ -1,5 +1,10 @@
 @import "variable";
 
+@media (max-width: 1500px) {
+  .sticky .search-inp, .sticky .top-contact{
+
+  }
+}
 @media (max-width: 1200px) {
   .header {
     .navbar {
@@ -54,6 +59,11 @@
 }
 
 @media (max-width: 991px) {
+  .sticky-header {
+    .center-navigation {
+      width: 100%;
+    }
+  }
   .banner-title {
     font-size: 30px;
   }
