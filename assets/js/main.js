@@ -43,14 +43,32 @@ jQuery(function ($) {
              btn loadmore
      =========================================================*/
 
-    $(".loadmore-show").slice(0, 6).show();
+   $(".loadmore-show").slice(0, 6).show();
+    $("#less").hide();
+      if ($(".loadmore-show:hidden").length == 0) {
+        $("#loadMore").hide();
+    }
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
         $(".loadmore-show:hidden").slice(0, 6).slideDown();
         if ($(".loadmore-show:hidden").length == 0) {
-            $("#load").fadeOut('slow');
+            $("#loadMore").hide();
+            $("#less").fadeIn('slow');
         }
+        $('#less').on('click',function (event) {
+            event.preventDefault();
+            $('.loadmore-show').not(':lt(6)').fadeOut(1000);
+            $("#loadMore").fadeIn('slow');
+            $("#less").hide();
+        });
+        $('#less').click(function () {
+            $('html, body').animate({
+                scrollTop: $(".loadmore-show").offset().top
+            }, 1000);
+        });
     });
+
+
 
 
     /*==========================================================
