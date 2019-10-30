@@ -55,7 +55,7 @@ h1 {
   font-weight: 700; }
 
 h2 {
-  font-size: 30px;
+  font-size: 26px;
   line-height: 36px;
   font-weight: 600; }
 
@@ -171,18 +171,19 @@ a:hover {
     color: #21396F; }
 
 .section-title-content {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center; }
   .section-title-content .section-title,
   .section-title-content .column-title {
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 700;
-    color: #3b1d82;
+    color: #21396F;
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 0; }
     .section-title-content .section-title span,
     .section-title-content .column-title span {
+      display: block;
       display: block;
       font-size: 14px;
       font-family: "Open Sans", sans-serif;
@@ -213,7 +214,7 @@ a:hover {
   font-size: 24px; }
 
 .sm-title {
-  color: #3b1d82;
+  color: #21396F;
   font-size: 22px;
   text-transform: capitalize; }
 
@@ -326,7 +327,8 @@ input {
   line-height: 65px;
   text-transform: uppercase;
   padding: 0 12px;
-  display: block; }
+  display: block;
+  z-index: 1; }
   .header ul.navbar-nav > li > a i {
     margin-left: 10px; }
   .header ul.navbar-nav > li > a:hover {
@@ -345,19 +347,39 @@ input {
   border: none; }
   .header ul.navbar-nav li .dropdown-menu li a {
     padding: 7px 10px;
-    border-bottom: 2px solid transparent;
     font-size: 14px;
     display: block;
     color: #222;
-    margin: 0 15px; }
+    z-index: 9;
+    position: relative; }
     .header ul.navbar-nav li .dropdown-menu li a:hover {
-      color: #d20055;
-      border-bottom: 2px solid #3b1d82; }
+      color: #fff; }
   .header ul.navbar-nav li .dropdown-menu li:last-child a {
     border-bottom: none; }
 
-.header ul.navbar-nav .dropdown-submenu {
+.header ul.navbar-nav .dropdown-submenu, .header ul.navbar-nav .dropdown-menu li {
   position: relative; }
+  .header ul.navbar-nav .dropdown-submenu:after, .header ul.navbar-nav .dropdown-menu li:after {
+    background: #21396F;
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 0;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    top: 0;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease; }
+  .header ul.navbar-nav .dropdown-submenu:hover a, .header ul.navbar-nav .dropdown-submenu:hover:after, .header ul.navbar-nav .dropdown-menu li:hover a, .header ul.navbar-nav .dropdown-menu li:hover:after {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+    color: #fff; }
 
 .header ul.navbar-nav .dropdown-submenu > .dropdown-menu {
   left: 100%;
@@ -365,7 +387,10 @@ input {
   -webkit-box-shadow: unset;
   box-shadow: unset; }
   .header ul.navbar-nav .dropdown-submenu > .dropdown-menu a {
-    display: block; }
+    display: block;
+    color: #222 !important; }
+    .header ul.navbar-nav .dropdown-submenu > .dropdown-menu a:hover {
+      color: #ffff !important; }
 
 .header ul.navbar-nav .dropdown-submenu:hover > .dropdown-menu, .header ul.navbar-nav .dropdown-submenu:focus a:focus + .dropdown-menu {
   display: block; }
@@ -622,7 +647,7 @@ input {
     position: absolute;
     height: 1px;
     width: 100px;
-    background: #3b1d82;
+    background: #21396F;
     display: block;
     content: '';
     bottom: -1px; }
@@ -731,7 +756,7 @@ input {
     padding-top: 8px;
     padding-right: 15px; }
     .header-top .top-contact a, .header-top .sagc-social a {
-      color: #858585;
+      color: #000000;
       padding: 0;
       line-height: 22px;
       margin-right: 20px; }
@@ -990,7 +1015,7 @@ input {
   .working-section .contracting-content h3 {
     margin-bottom: 0;
     color: #fff;
-    background-color: #3b1d82;
+    background-color: #21396F;
     line-height: 45px;
     text-align: center;
     font-size: 22px; }
@@ -1007,7 +1032,7 @@ input {
       max-width: 100%;
       height: 500px; }
   .working-section .civil-working .working-proces {
-    background-color: #3b1d82;
+    background-color: #21396F;
     padding: 35px 30px 10px;
     height: 500px; }
     .working-section .civil-working .working-proces .proces-info {
@@ -1041,7 +1066,7 @@ input {
   padding: 80px 0; }
   .about-section .section-title-content .section-title {
     margin-bottom: 0;
-    padding-bottom: 20px; }
+    padding-bottom: 10px; }
   .about-section .planing-content {
     margin-top: 30px; }
     .about-section .planing-content .planing-info {
@@ -1075,14 +1100,14 @@ input {
     list-style: inside; }
 
 .industrail-services .services-info .section-title {
-  color: #3b1d82;
+  color: #21396F;
   margin-bottom: 40px; }
 
 .industrail-services .services-info .content h3 {
   color: #120f4e; }
 
 .industrail-services .services-info .content h4 {
-  color: #3b1d82; }
+  color: #21396F; }
 
 .loadmore-show {
   display: none; }
@@ -1144,10 +1169,12 @@ input {
 .contractfrom-section {
   padding: 80px 0; }
   .contractfrom-section .section-title {
-    color: #3b1d82;
+    color: #21396F;
     margin-bottom: 20px; }
-  .contractfrom-section .contract-title img {
-    margin-right: 15px; }
+  .contractfrom-section .contract-title {
+    font-size: 18px; }
+    .contractfrom-section .contract-title img {
+      margin-right: 15px; }
   .contractfrom-section .contact-info p {
     margin-bottom: 20px; }
     .contractfrom-section .contact-info p i {
@@ -1157,9 +1184,8 @@ input {
     min-height: 400px;
     position: relative; }
     .contractfrom-section .contact-info.details .contract-title {
-      color: #3b1d82;
-      position: relative;
-      font-size: 22px; }
+      color: #21396F;
+      position: relative; }
     .contractfrom-section .contact-info.details p {
       margin-bottom: 20px;
       color: #120f4e;
@@ -1237,12 +1263,12 @@ input {
 .administration-section .admin-biodetails {
   margin-bottom: 20px; }
   .administration-section .admin-biodetails h2 {
-    color: #3b1d82;
+    color: #21396F;
     margin-bottom: 25px;
     font-size: 22px; }
   .administration-section .admin-biodetails .speech-code {
     position: relative;
-    background-color: #3b1d82;
+    background-color: #21396F;
     padding: 20px;
     font-weight: 600;
     font-style: italic;
@@ -1295,6 +1321,6 @@ input {
     width: 40%; }
 
 .sagc-page-title .page-title-border {
-  border-bottom: 1px solid #3b1d82;
+  border-bottom: 1px solid #21396F;
   display: inline-block;
   padding-bottom: 8px; }

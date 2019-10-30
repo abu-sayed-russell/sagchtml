@@ -146,6 +146,7 @@
         text-transform: uppercase;
         padding: 0 12px;
         display: block;
+        z-index: 1;
 
         i {
           margin-left: 10px;
@@ -173,15 +174,14 @@
         li {
           a {
             padding: 7px 10px;
-            border-bottom: 2px solid transparent;
             font-size: 14px;
             display: block;
             color: #222;
-            margin: 0 15px;
+            z-index: 9;
+            @include position(relative);
 
             &:hover {
-              color: $primary-dark;
-              border-bottom: 2px solid $secondary-color;
+              color: $white-color;
             }
           }
 
@@ -194,8 +194,31 @@
       }
     }
 
-    .dropdown-submenu {
+    .dropdown-submenu, .dropdown-menu li {
       position: relative;
+
+      &:after {
+        background: #21396F;
+        position: absolute;
+        content: '';
+        left: 0;
+        width: 0;
+        height: 100%;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+        top: 0;
+        @include transition();
+      }
+
+      &:hover a, &:hover:after {
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+        color: #fff;
+      }
+
+
     }
 
     .dropdown-submenu {
@@ -207,7 +230,13 @@
 
         a {
           display: block;
+          color: #222 !important;
+          &:hover{
+            color: #ffff !important;
+          }
         }
+
+
       }
 
       &:hover > .dropdown-menu, &:focus a:focus + .dropdown-menu {
@@ -734,7 +763,7 @@
     padding-right: 15px;
 
     a {
-      color: #858585;
+      color: #000000;
       padding: 0;
       line-height: 22px;
       margin-right: 20px;
@@ -1170,7 +1199,7 @@
   .section-title-content {
     .section-title {
       margin-bottom: 0;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
     }
   }
 
@@ -1344,6 +1373,8 @@
   }
 
   .contract-title {
+    font-size: 18px;
+
     img {
       margin-right: 15px;
     }
@@ -1366,8 +1397,7 @@
 
     .contract-title {
       color: $secondary-color;
-      @include position(relative);
-      font-size: 22px;
+      @include position(relative)
     }
 
     p {
