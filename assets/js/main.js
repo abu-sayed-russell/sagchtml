@@ -43,32 +43,14 @@ jQuery(function ($) {
              btn loadmore
      =========================================================*/
 
-   $(".loadmore-show").slice(0, 6).show();
-    $("#less").hide();
-      if ($(".loadmore-show:hidden").length == 0) {
-        $("#loadMore").hide();
-    }
+    $(".loadmore-show").slice(0, 6).show();
     $("#loadMore").on('click', function (e) {
         e.preventDefault();
         $(".loadmore-show:hidden").slice(0, 6).slideDown();
         if ($(".loadmore-show:hidden").length == 0) {
-            $("#loadMore").hide();
-            $("#less").fadeIn('slow');
+            $("#load").fadeOut('slow');
         }
-        $('#less').on('click',function (event) {
-            event.preventDefault();
-            $('.loadmore-show').not(':lt(6)').fadeOut(1000);
-            $("#loadMore").fadeIn('slow');
-            $("#less").hide();
-        });
-        $('#less').click(function () {
-            $('html, body').animate({
-                scrollTop: $(".loadmore-show").offset().top
-            }, 1000);
-        });
     });
-
-
 
 
     /*==========================================================
@@ -113,7 +95,6 @@ jQuery(function ($) {
             }
         }
     });
-
 
     var sync1 = $("#sync1");
     var sync2 = $("#sync2");
@@ -188,6 +169,39 @@ jQuery(function ($) {
         e.preventDefault();
         var number = $(this).index();
         sync1.data('owl.carousel').to(number, 300, true);
+    });
+
+    /*==========================================================
+          realted  Slider
+   ============================================================*/
+
+    $('.realated-slider').owlCarousel({
+        items: 3,
+        mouseDrag: true,
+        touchDrag: true,
+        dots: false,
+        autoplayTimeout: 2000,
+        animateOut: 'fadeOut',
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        loop: true,
+        margin: 20,
+        nav: true,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            },
+            1200: {
+                items: 3
+            }
+        }
     });
 
     /* ----------------------------------------------------------- */

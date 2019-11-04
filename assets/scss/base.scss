@@ -95,9 +95,10 @@ ul {
 
 }
 
-ul li {
-  list-style: none;
-}
+//
+//ul li {
+//  list-style: none;
+//}
 
 a:link,
 a:visited {
@@ -285,3 +286,125 @@ input {
   padding-top: 0;
 }
 
+.read-more {
+  color: $primary-blue;
+  font-weight: 500;
+  font-size: 15px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+//carosol slider
+
+.owl-nav {
+  position: absolute;
+  right: -10px;
+  top: -90px;
+
+  .owl-prev, .owl-next {
+    font-size: 20px;
+    background: $primary-color;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    color: $white-color;
+    line-height: 30px;
+  }
+}
+
+.detailBox {
+  width: 100%;
+  border: 1px solid #bbb;
+}
+
+.titleBox {
+  background-color: #fdfdfd;
+  padding: 10px;
+}
+
+.titleBox label {
+  color: #444;
+  margin: 0;
+  display: inline-block;
+}
+
+.commentBox {
+  padding: 10px;
+  border-top: 1px dotted #bbb;
+}
+
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+  width: 80%;
+}
+
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+  width: 18%;
+}
+
+.actionBox .form-group * {
+  width: 100%;
+}
+
+.taskDescription {
+  margin-top: 10px;
+}
+
+.commentList {
+  padding: 0;
+  list-style: none;
+
+}
+
+.commentList li {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.commentList li > div {
+  display: table-cell;
+}
+
+.commenterImage {
+  width: 30px;
+  margin-right: 5px;
+  height: 100%;
+  float: left;
+}
+
+.commenterImage img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.commentText p {
+  margin: 0;
+}
+
+.sub-text {
+  color: #aaa;
+  font-family: verdana;
+  font-size: 11px;
+}
+
+.actionBox {
+  border-top: 1px dotted #bbb;
+  padding: 10px;
+}
+
+.commentList {
+  > li {
+    padding-left: 0;
+
+    ul {
+      li {
+        padding-left: 80px;
+        display: block !important;
+      }
+    }
+  }
+
+}

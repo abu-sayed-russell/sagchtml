@@ -101,7 +101,9 @@
   .constracting-catagorise .contracting-image.bottom {
     display: none; }
   .header.sticky {
-    display: none; } }
+    display: none; }
+  .single-section .author-description {
+    width: 79%; } }
 
 @media (max-width: 767px) {
   .client-section .clinet-info .single-info {
@@ -126,7 +128,21 @@
       .working-section .civil-working.civil-workingproces .working-proces .proces-info, .working-section .civil-working .working-proces .proces-info {
         width: 100%; }
   .error-info .search-inp {
-    width: 80%; } }
+    width: 80%; }
+  .single-section .author-content .autor-image img {
+    width: 100%;
+    margin-bottom: 15px; }
+  .single-section .author-content .author-description {
+    width: 100%; }
+  .single-section .single-sitebar .wrap-sagc-widget {
+    padding-left: 0; }
+    .single-section .single-sitebar .wrap-sagc-widget img {
+      position: relative;
+      left: 0;
+      width: 100%;
+      height: 78px;
+      display: block;
+      margin-bottom: 10px; } }
 
 @media (max-width: 575px) {
   .header-top .col-lg-4 {

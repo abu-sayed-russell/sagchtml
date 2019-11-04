@@ -22,7 +22,6 @@
       header area
 ===========================*/
 .sticky-header {
-
   .center-navigation {
     display: block;
     margin: 0 auto;
@@ -79,6 +78,14 @@
 }
 
 .sticky {
+  .index-logo {
+    display: none;
+  }
+
+  .stiky-index {
+    display: block !important;
+  }
+
   .homenavigation-height {
     height: 70px;
   }
@@ -122,6 +129,10 @@
 
 
 .header {
+  .stiky-index {
+    display: none;
+  }
+
   .navbar {
     padding: 10px 0;
 
@@ -231,7 +242,8 @@
         a {
           display: block;
           color: #222 !important;
-          &:hover{
+
+          &:hover {
             color: #ffff !important;
           }
         }
@@ -400,8 +412,9 @@
 
     p {
       color: $white-color;
-      margin-bottom: 40px;
       font-family: $opensans;
+      width: 70%;
+      margin: 0 auto 40px;
     }
 
     .banner-btn {
@@ -411,7 +424,8 @@
         height: 55px;
         line-height: 55px;
         padding: 0 25px;
-        background-color: $primary-color;
+        background-color: $white-color;
+        color: #000;
 
         &.fill {
           padding: 0 15px;
@@ -423,7 +437,8 @@
 
         &:hover {
           background-color: $bg-transparent;
-          border: 1px solid $primary-color;
+          border: 1px solid $white-color;
+          color: $white-color;
         }
       }
 
@@ -530,7 +545,7 @@
         background: rgba(81, 57, 57, .8);
         line-height: 50px;
         margin-bottom: 0;
-        font-size: 20px;
+        font-size: 16px;
 
         a {
           color: $white-color;
@@ -569,23 +584,6 @@
       }
     }
 
-    .owl-nav {
-      position: absolute;
-      right: -10px;
-      top: -90px;
-
-      .owl-prev, .owl-next {
-        font-size: 20px;
-        background: $primary-color;
-        height: 30px;
-        width: 30px;
-        margin: 10px;
-        display: inline-block;
-        text-align: center;
-        color: $white-color;
-        line-height: 30px;
-      }
-    }
   }
 
   .section-title.shape {
@@ -641,6 +639,11 @@
       font-size: 22px;
       margin: 20px auto;
       border-radius: 50%;
+      background-color: $white-color;
+
+      i {
+        color: #000;
+      }
     }
   }
 }
@@ -1292,6 +1295,7 @@
         li {
           margin-bottom: 5px;
           line-height: 28px;
+          list-style: none;
 
           i {
             color: #d1212b;
@@ -1372,13 +1376,6 @@
     margin-bottom: 20px;
   }
 
-  .contract-title {
-    font-size: 18px;
-
-    img {
-      margin-right: 15px;
-    }
-  }
 
   .contact-info {
     p {
@@ -1409,29 +1406,61 @@
         margin-right: 15px;
         color: #fab702;
         font-size: 20px;
+        @include position(absolute);
+        left: 1px;
+        top: 5px;
+      }
+    }
+
+    .lcation-withicon {
+      p {
+        padding-left: 30px;
       }
     }
   }
+}
 
-  .contract-from {
+.contract-title {
+  font-size: 18px;
 
-    .contract-from-group {
-      .inp-from {
-        width: 100%;
-        background: $white-color;
-        box-shadow: 10px 0 20px rgba(234, 234, 234, 0.75);
-        height: 50px;
-        margin-bottom: 16px;
-        padding: 10px 20px;
-        color: #777;
-        border: 1px solid #d9dee0;
-        resize: none;
-      }
+  img {
+    margin-right: 15px;
+  }
+}
 
-      .txt-box {
-        height: 150px;
-      }
+.contract-from {
+  width: 100%;
+  margin-top: 50px;
+
+  .contract-from-group {
+    .inp-from {
+      width: 100%;
+      background: $white-color;
+      box-shadow: 10px 0 20px rgba(234, 234, 234, 0.75);
+      height: 50px;
+      margin-bottom: 16px;
+      padding: 10px 20px;
+      color: #777;
+      border: 1px solid #d9dee0;
+      resize: none;
     }
+
+    .txt-box {
+      height: 150px;
+    }
+  }
+
+  #wp-comment-cookies-consent {
+    width: auto;
+    margin-right: 5px;
+  }
+
+  .submit-btn {
+    .btn {
+      margin-top: -20px;
+      display: inline-block;
+    }
+
   }
 }
 
@@ -1607,3 +1636,272 @@
     padding-bottom: 8px;
   }
 }
+
+//single-page
+.single-section {
+  .sagc-single {
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    margin: 30px 0;
+    padding: 30px 10px 20px 15px;
+    border-radius: 4px;
+  }
+
+  .single-conten {
+    h1 {
+      font-size: 26px;
+      line-height: 34px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      margin-top: 35px;
+      position: relative;
+
+      &:after {
+        display: block;
+        content: "";
+        border-top: 3px solid #2632363b;
+        width: 8rem;
+        margin-top: .2em;
+      }
+    }
+
+    .blog-meta {
+      margin-bottom: 15px;
+
+      a {
+        font-family: $opensans;
+        color: #000000;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .blog-image {
+      margin-bottom: 15px;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    ul {
+      margin-bottom: 15px;
+
+      li {
+        list-style-type: decimal;
+        list-style-position: inside;
+      }
+    }
+
+    ul.disk {
+      li {
+        list-style: disc;
+        list-style-position: inside;
+      }
+    }
+
+    ul.leading-zero {
+      li {
+        list-style-type: decimal-leading-zero;
+        list-style-position: inside;
+      }
+    }
+  }
+
+  .widget-search {
+    .search-inp {
+      padding-left: 0;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .single-sitebar {
+    margin-bottom: 20px;
+
+    .widget-title {
+      background-color: $secondary-color;
+
+      h3 {
+        line-height: 40px;
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+
+    .wrap-sagc-widget {
+      padding-left: 110px;
+      min-height: 90px;
+      @include position(relative);
+      margin-bottom: 20px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      img {
+        position: absolute;
+        left: 0;
+        width: 95px;
+        height: 78px;
+      }
+    }
+
+    .widget-wrap {
+      h4 {
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-family: $opensans;
+      }
+
+      span {
+        color: #000000;
+        display: block;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .author-content {
+    border: 1px solid #ccc;
+    padding: 15px;
+
+    .autor-image {
+      display: block;
+
+      img {
+        float: left;
+        border-radius: 15px;
+        width: 17%;
+      }
+    }
+
+    .author-description {
+      margin-left: 15px;
+      position: relative;
+      top: 1px;
+      float: right;
+      width: 80%;
+      text-align: left;
+    }
+
+    .author-name {
+      a {
+        display: block;
+        font-family: $opensans;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .author-designation {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 15px;
+        display: block;
+      }
+    }
+  }
+
+  .editor-chose-share {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    span {
+      height: 32px;
+      border-left: 1px solid #6a6a6a;
+      border-top: 1px solid #6a6a6a;
+      border-bottom: 1px solid #6a6a6a;
+      display: inline-block;
+      padding: 2px 15px;
+      color: #6b6b6b;
+      margin-right: 25px;
+      position: relative;
+
+      &:after, &:before {
+        position: absolute;
+        content: '';
+        left: auto;
+        right: -16px;
+        width: 21px;
+        height: 1px;
+        background: #6a6a6a;
+        display: inline-block;
+      }
+
+      &:after {
+        bottom: 7px;
+        transform: rotate(-50deg);
+      }
+
+      &:before {
+        top: 7px;
+        transform: rotate(50deg)
+      }
+    }
+
+    a {
+      color: #333351;
+      line-height: 1;
+      margin-right: 7px;
+      cursor: pointer;
+    }
+  }
+
+  .realated-slider {
+    margin-bottom: 30px;
+
+    .item-image {
+      margin-bottom: 15px;
+
+      img {
+        height: 200px;
+        max-height: 100%;
+      }
+    }
+
+    .sigle-item {
+      .sm-title {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin-bottom: 15px;
+
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .owl-nav {
+      top: -50px;
+    }
+
+    .slider-bnt {
+      text-align: right;
+    }
+
+    .btn {
+      line-height: 40px;
+      height: 40px;
+      padding: 0 15px;
+      margin-left: 10px;
+    }
+  }
+
+}
+
