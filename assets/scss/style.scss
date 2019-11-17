@@ -545,7 +545,7 @@
         background: rgba(81, 57, 57, .8);
         line-height: 50px;
         margin-bottom: 0;
-        font-size: 16px;
+        font-size: 20px;
 
         a {
           color: $white-color;
@@ -1429,9 +1429,6 @@
 }
 
 .contract-from {
-  width: 100%;
-  margin-top: 50px;
-
   .contract-from-group {
     .inp-from {
       width: 100%;
@@ -1448,19 +1445,6 @@
     .txt-box {
       height: 150px;
     }
-  }
-
-  #wp-comment-cookies-consent {
-    width: auto;
-    margin-right: 5px;
-  }
-
-  .submit-btn {
-    .btn {
-      margin-top: -20px;
-      display: inline-block;
-    }
-
   }
 }
 
@@ -1902,6 +1886,27 @@
       margin-left: 10px;
     }
   }
-
 }
+
+.valued-client-info {
+  border: 1px dashed #ddd;
+  padding: 20px 40px;
+  border-radius: 100px;
+}
+
+.client-info img {
+  margin-bottom: 10px;
+}
+
+.client-info p {
+  display: block;
+  color: #21396F;
+  font-weight: 600;
+}
+
+.client-info span {
+  display: inline-block;
+  font-weight: 700;
+}
+
 

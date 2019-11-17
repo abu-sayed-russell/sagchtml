@@ -267,74 +267,6 @@ input {
     color: #fff;
     line-height: 30px; }
 
-.detailBox {
-  width: 100%;
-  border: 1px solid #bbb; }
-
-.titleBox {
-  background-color: #fdfdfd;
-  padding: 10px; }
-
-.titleBox label {
-  color: #444;
-  margin: 0;
-  display: inline-block; }
-
-.commentBox {
-  padding: 10px;
-  border-top: 1px dotted #bbb; }
-
-.commentBox .form-group:first-child, .actionBox .form-group:first-child {
-  width: 80%; }
-
-.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
-  width: 18%; }
-
-.actionBox .form-group * {
-  width: 100%; }
-
-.taskDescription {
-  margin-top: 10px; }
-
-.commentList {
-  padding: 0;
-  list-style: none; }
-
-.commentList li {
-  margin: 0;
-  margin-top: 10px; }
-
-.commentList li > div {
-  display: table-cell; }
-
-.commenterImage {
-  width: 30px;
-  margin-right: 5px;
-  height: 100%;
-  float: left; }
-
-.commenterImage img {
-  width: 100%;
-  border-radius: 50%; }
-
-.commentText p {
-  margin: 0; }
-
-.sub-text {
-  color: #aaa;
-  font-family: verdana;
-  font-size: 11px; }
-
-.actionBox {
-  border-top: 1px dotted #bbb;
-  padding: 10px; }
-
-.commentList > li {
-  padding-left: 0; }
-  .commentList > li ul li {
-    padding-left: 80px;
-    display: block !important; }
-
 /*==========================
       header area
 ===========================*/
@@ -688,7 +620,7 @@ input {
         background: rgba(81, 57, 57, 0.8);
         line-height: 50px;
         margin-bottom: 0;
-        font-size: 16px; }
+        font-size: 20px; }
         .services-section .services-blog-details .media-content .gtw-title a {
           color: #fff; }
   .services-section .load-more {
@@ -1288,28 +1220,20 @@ input {
   .contract-title img {
     margin-right: 15px; }
 
-.contract-from {
+.contract-from .contract-from-group .inp-from {
   width: 100%;
-  margin-top: 50px; }
-  .contract-from .contract-from-group .inp-from {
-    width: 100%;
-    background: #fff;
-    -webkit-box-shadow: 10px 0 20px rgba(234, 234, 234, 0.75);
-    box-shadow: 10px 0 20px rgba(234, 234, 234, 0.75);
-    height: 50px;
-    margin-bottom: 16px;
-    padding: 10px 20px;
-    color: #777;
-    border: 1px solid #d9dee0;
-    resize: none; }
-  .contract-from .contract-from-group .txt-box {
-    height: 150px; }
-  .contract-from #wp-comment-cookies-consent {
-    width: auto;
-    margin-right: 5px; }
-  .contract-from .submit-btn .btn {
-    margin-top: -20px;
-    display: inline-block; }
+  background: #fff;
+  -webkit-box-shadow: 10px 0 20px rgba(234, 234, 234, 0.75);
+  box-shadow: 10px 0 20px rgba(234, 234, 234, 0.75);
+  height: 50px;
+  margin-bottom: 16px;
+  padding: 10px 20px;
+  color: #777;
+  border: 1px solid #d9dee0;
+  resize: none; }
+
+.contract-from .contract-from-group .txt-box {
+  height: 150px; }
 
 .location-section .location-map {
   position: relative; }
@@ -1608,3 +1532,36 @@ input {
     height: 40px;
     padding: 0 15px;
     margin-left: 10px; }
+
+.valued-client-info {
+  border: 1px dashed #ddd;
+  padding: 20px 40px;
+  border-radius: 100px; }
+
+.client-info img {
+  margin-bottom: 10px; }
+
+.client-info p {
+  display: block;
+  color: #21396F;
+  font-weight: 600; }
+
+.client-info span {
+  display: inline-block;
+  font-weight: 700; }
+.file-attach {
+  width: auto;
+}
+
+.attchment-btn {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.contract-page-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-family: $opensans;
+}
